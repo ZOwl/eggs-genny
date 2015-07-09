@@ -593,7 +593,7 @@ EggsGennyGenerator = yeoman.generators.Base.extend({
           pkg.devDependencies["gulp-coffee"] = "~2.3.1";
         }
         if( this.config.get('preprocessor') === 'less' ){
-          pkg.devDependencies["gulp-less"] = "~2.0.1";
+          pkg.devDependencies["gulp-less"] = "~3.0.3";
         }else{
           pkg.devDependencies["gulp-sass"] = "~1.3.3";
         }

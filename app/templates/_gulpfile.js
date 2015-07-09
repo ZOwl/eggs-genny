@@ -38,7 +38,7 @@ gulp.task( 'reload-me', function(){
   <% if(coffee){ %>gulp.watch( 'app/js/*.coffee', ['compile-coffee', 'validate-js'] );
   <% }else { %>gulp.watch( 'app/js/*.js', ['validate-js'] );<% } %>
 
-  plug.livereload.listen();
+  plug.livereload.listen({port:35728});
   gulp.watch( ['app/css/*.css', 'app/js/*.js', 'app/index.html'<% if(depsJS.angular){ %>, 'app/partials/*.html'<% } %> ], function(){
     loggit( "I've reloaded your page, <% if(greeting === 'sir'){ %>sir!<% } if(greeting === 'ma\'am'){ %>ma'am!<% } if(greeting === 'cap\'n'){ %>cap'n!<% } if(greeting === 'homie'){ %>homie!<% } if(greeting === 'hombre'){ %>hombre!<% } if(greeting === 'miss'){ %>miss!<% } if(greeting === 'boss'){ %>boss!<% } %>\n    "+time.timePlz(),
             "yellow",
